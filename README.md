@@ -77,9 +77,11 @@ This repository currently serves as the release of the technical paper's impleme
 
 If you find the repo useful for your research, please consider citing our paper:
 
-> @inproceedings{instant_nvr,
->     title={Learning Neural Volumetric Representations of Dynamic Humans in Minutes},
->     author={Chen Geng and Sida Peng and Zhen Xu and Hujun Bao and Xiaowei Zhou},
->     booktitle={CVPR},
->     year={2023}
-> }
+```
+@inproceedings{instant_nvr,
+    title={Learning Neural Volumetric Representations of Dynamic Humans in Minutes},
+    author={Chen Geng and Sida Peng and Zhen Xu and Hujun Bao and Xiaowei Zhou},
+    booktitle={CVPR},
+    year={2023}
+}
+```
