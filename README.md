@@ -2,7 +2,7 @@
 
 ### [Project Page](https://zju3dv.github.io/instant_nvr) | [Video](https://zju3dv.github.io/instant_nvr) | [Paper](https://openaccess.thecvf.com/content/CVPR2023/papers/Geng_Learning_Neural_Volumetric_Representations_of_Dynamic_Humans_in_Minutes_CVPR_2023_paper.pdf) | [Data](https://github.com/zju3dv/instant_nvr)
 
-![inb](https://chen-geng.com/instant_nvr/images/inb.gif)
+![inb](docs/media/inb.gif)
 
 > [Learning Neural Volumetric Representations of Dynamic Humans in Minutes](https://zju3dv.github.io/instant_nvr)
 >
