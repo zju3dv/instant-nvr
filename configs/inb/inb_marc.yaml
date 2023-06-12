@@ -1,0 +1,75 @@
+parent_cfg: "configs/inb/inb_377.yaml"
+
+train_dataset:
+  data_root: "data/monocap/marc_images35000_36200"
+  human: "marc_images35000_36200"
+  ann_file: "data/monocap/marc_images35000_36200/annots.npy"
+
+val_dataset:
+  data_root: "data/monocap/marc_images35000_36200"
+  human: "marc_images35000_36200"
+  ann_file: "data/monocap/marc_images35000_36200/annots.npy"
+
+test_dataset:
+  data_root: "data/monocap/marc_images35000_36200"
+  human: "marc_images35000_36200"
+  ann_file: "data/monocap/marc_images35000_36200/annots.npy"
+
+bullet:
+  dataset_kwargs:
+    data_root: "data/monocap/marc_images35000_36200"
+    ann_file: "data/monocap/marc_images35000_36200/annots.npy"
+    human: "marc_images35000_36200"
+
+# data options
+training_view: [0]
+test_view: []
+begin_ith_frame: 0
+num_train_frame: 100
+frame_interval: 5
+erode_edge: False
+ratio: 1.0
+
+# resd_loss_weight: 1.0
+
+# training_stages:
+#   - ratio: 0.6
+#     _start: 0
+#   - ratio: 1.0
+#     _start: 2
+#     sample_focus: head
+#   - ratio: 1.0
+#     _start: 3
+#     sample_focus: ""
+
+train:
+  lr: 1.2e-3
+
+# use_pair_reg: False
+test:
+  frame_sampler_interval: 6
+
+smpl: "smpl"
+lbs: "lbs"
+params: "params"
+vertices: "vertices"
+
+smpl_thresh: 0.1
+exp_name: inb_marc
+pair_loss_weight: 1e-4
+
+train:
+  lr: 1e-3
+
+eval_ratio: 1.0
+
+training_stages:
+  - ratio: 0.3
+    _start: 0
+  - ratio: 0.5
+    sample_focus: head
+    _start: 2
+  - ratio: 0.5
+    sample_focus: ""
+    reg_dist_weight: 1.0
+    _start: 4

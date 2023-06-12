@@ -1,0 +1,66 @@
+parent_cfg: "configs/inb/inb_377.yaml"
+
+train_dataset:
+  data_root: "data/monocap/vlad_images1011"
+  human: "vlad_images1011"
+  ann_file: "data/monocap/vlad_images1011/annots.npy"
+
+val_dataset:
+  data_root: "data/monocap/vlad_images1011"
+  human: "vlad_images1011"
+  ann_file: "data/monocap/vlad_images1011/annots.npy"
+
+test_dataset:
+  data_root: "data/monocap/vlad_images1011"
+  human: "vlad_images1011"
+  ann_file: "data/monocap/vlad_images1011/annots.npy"
+
+bullet:
+  dataset_kwargs:
+    data_root: "data/monocap/vlad_images1011"
+    ann_file: "data/monocap/vlad_images1011/annots.npy"
+    human: "vlad_images1011"
+
+# data options
+training_view: [66]
+test_view: [0, 10, 20, 30, 40, 50, 60, 70, 80, 90, 100]
+begin_ith_frame: 0
+num_train_frame: 100
+frame_interval: 5
+erode_edge: False
+ratio: 1.0
+
+training_stages:
+  - ratio: 1.0
+    _start: 0
+
+train:
+  lr: 8e-4
+
+test:
+  frame_sampler_interval: 6
+
+smpl: "smpl"
+lbs: "lbs"
+params: "params"
+vertices: "vertices"
+
+smpl_thresh: 0.1
+exp_name: inb_vlad
+pair_loss_weight: 1e-4
+
+train:
+  lr: 1e-3
+
+eval_ratio: 1.0
+
+training_stages:
+  - ratio: 0.3
+    _start: 0
+  - ratio: 0.5
+    sample_focus: head
+    _start: 2
+  - ratio: 0.5
+    sample_focus: ""
+    reg_dist_weight: 1.0
+    _start: 4

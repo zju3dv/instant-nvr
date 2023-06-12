@@ -1,0 +1,12 @@
+ipdb
+colored_traceback
+opencv-python==4.7.0.68
+sympy==1.11.1
+tensorboardX==2.6
+imageio==2.25.1
+trimesh==3.20.0
+matplotlib==3.7.0
+matplotlib-inline==0.1.6
+plyfile==0.7.4
+lpips==0.1.4
+scikit-image==0.19.3

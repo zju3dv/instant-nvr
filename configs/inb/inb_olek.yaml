@@ -1,0 +1,66 @@
+parent_cfg: "configs/inb/inb_377.yaml"
+
+train_dataset:
+  data_root: "data/monocap/olek_images0812"
+  human: "olek_images0812"
+  ann_file: "data/monocap/olek_images0812/annots.npy"
+
+val_dataset:
+  data_root: "data/monocap/olek_images0812"
+  human: "olek_images0812"
+  ann_file: "data/monocap/olek_images0812/annots.npy"
+
+test_dataset:
+  data_root: "data/monocap/olek_images0812"
+  human: "olek_images0812"
+  ann_file: "data/monocap/olek_images0812/annots.npy"
+
+bullet:
+  dataset_kwargs:
+    data_root: "data/monocap/olek_images0812"
+    ann_file: "data/monocap/olek_images0812/annots.npy"
+    human: "olek_images0812"
+
+# data options
+training_view: [44]
+test_view: [0, 5, 10, 15, 20, 25, 30, 35, 40, 45, 49]
+begin_ith_frame: 0
+num_train_frame: 100
+frame_interval: 5
+erode_edge: False
+ratio: 1.0
+
+# training_stages:
+#   - ratio: 1.0
+#     _start: 0
+
+# train:
+#   lr: 8e-4
+
+test:
+  frame_sampler_interval: 6
+
+smpl: "smpl"
+lbs: "lbs"
+params: "params"
+vertices: "vertices"
+
+smpl_thresh: 0.05
+exp_name: inb_olek
+pair_loss_weight: 10.0
+
+train:
+  lr: 1e-3
+
+eval_ratio: 1.0
+
+training_stages:
+  - ratio: 0.3
+    _start: 0
+  - ratio: 0.5
+    sample_focus: head
+    _start: 2
+  - ratio: 0.5
+    sample_focus: ""
+    reg_dist_weight: 1.0
+    _start: 4

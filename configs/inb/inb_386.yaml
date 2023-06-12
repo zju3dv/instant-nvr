@@ -1,0 +1,37 @@
+parent_cfg: "configs/inb/inb_377.yaml"
+
+train_dataset:
+  data_root: "data/zju-mocap/my_386"
+  human: "my_386"
+  ann_file: "data/zju-mocap/my_386/annots.npy"
+
+val_dataset:
+  data_root: "data/zju-mocap/my_386"
+  human: "my_386"
+  ann_file: "data/zju-mocap/my_386/annots.npy"
+
+test_dataset:
+  data_root: "data/zju-mocap/my_386"
+  human: "my_386"
+  ann_file: "data/zju-mocap/my_386/annots.npy"
+
+bullet:
+  dataset_kwargs:
+    data_root: "data/zju-mocap/my_386"
+    ann_file: "data/zju-mocap/my_386/annots.npy"
+    human: "my_386"
+
+# data options
+training_view: [4]
+test_view: []
+begin_ith_frame: 0
+num_train_frame: 100
+frame_interval: 5
+
+test:
+  frame_sampler_interval: 6
+
+smpl_thresh: 0.05
+exp_name: inb_386
+pair_loss_weight: 1e-6
+resd_loss_weight: 1e-2
