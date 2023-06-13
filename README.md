@@ -33,16 +33,16 @@ sh scripts/eval_monocap.sh
 
 ## Evaluation on ZJU-MoCap
 
-Taking 377 as an example.
+Let's take "377" as an example.
 
-Training on ZJU-MoCap.
+Training on ZJU-MoCap can be done by running.
 
 ```shell
 export name=377
-python train_net.py --cfg_file configs/inb/inb_${name}.yaml exp_name inb_${name} gpus ${GPUS} silent True
+python train_net.py --cfg_file configs/inb/inb_${name}.yaml exp_name inb_${name} gpus ${GPUS} 
 ```
 
-Evaluation:
+Evaluation can be done by running:
 ```shell
 export name=377
 python run.py --type evaluate --cfg_file configs/inb/inb_${name}.yaml exp_name inb_${name} gpus ${GPUS}
@@ -50,16 +50,16 @@ python run.py --type evaluate --cfg_file configs/inb/inb_${name}.yaml exp_name i
 
 ## Evaluation on MonoCap
 
-Taking "lan" as an example.
+Let's take "lan" as an example.
 
-Training on Monocap. 
+Training on Monocap can be done by running: 
 
 ```shell
 export name=lan
-python train_net.py --cfg_file configs/inb/inb_${name}.yaml exp_name inb_${name} gpus ${GPUS} silent True
+python train_net.py --cfg_file configs/inb/inb_${name}.yaml exp_name inb_${name} gpus ${GPUS} 
 ```
 
-Evaluation:
+Evaluation can be done by running:
 ```shell
 export name=lan
 python run.py --type evaluate --cfg_file configs/inb/inb_${name}.yaml exp_name inb_${name} gpus ${GPUS}
