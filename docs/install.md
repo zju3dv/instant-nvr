@@ -21,7 +21,7 @@ For both datasets, we refine the camera parameters. See below for further detail
 
 #### ZJU-MoCap dataset
 
-Since the dataset is licensed, please firstly fill in this [agreement](https://pengsida.net/project_page_assets/files/Refined_ZJU-MoCap_Agreement.pdf) and email it to [Chen Geng](mailto:gengchen@cs.stanford.edu) with cc to [Sida Peng](mailto:pengsida@zju.edu.cn) and [Xiaowei Zhou](mailto:xwzhou@zju.edu.cn) to request the link to the dataset.
+Since the dataset is licensed, we require the users to agree with some policies before obtaining the dataset. Anyone who wants access to the dataset can fill out this [form](https://forms.gle/rBSXkXpuSsHep4R26) to obtain the instructions to download the data. You can also alternatively fill in this [agreement](https://pengsida.net/project_page_assets/files/Refined_ZJU-MoCap_Agreement.pdf) and email it to [Chen Geng](mailto:gengchen@cs.stanford.edu) with cc to [Sida Peng](mailto:pengsida@zju.edu.cn) and [Xiaowei Zhou](mailto:xwzhou@zju.edu.cn) to obtain the access.
 
 **Please note, even if you have previously downloaded the ZJU-MoCap dataset from our [previous work](https://github.com/zju3dv/neuralbody), it is essential to re-download it. We have refined the dataset to include more accurate camera parameters and additional auxiliary files that are crucial for running our code.**
 
