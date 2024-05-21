@@ -34,10 +34,14 @@ class Visualizer:
             H, W = batch['H'].item(), batch['W'].item()
             mask_at_box = mask_at_box.reshape(H, W)
 
-            img_pred = np.zeros((H, W, 3))
-            img_pred[mask_at_box] = rgb_pred
+            if cfg.white_bkgd:
+                img_pred = np.ones((H, W, 3))
+                img_gt = np.ones((H, W, 3))
+            else:
+                img_pred = np.zeros((H, W, 3))
+                img_gt = np.zeros((H, W, 3))
 
-            img_gt = np.zeros((H, W, 3))
+            img_pred[mask_at_box] = rgb_pred
             img_gt[mask_at_box] = rgb_gt
 
         result_dir = os.path.join(self.result_dir, 'comparison')

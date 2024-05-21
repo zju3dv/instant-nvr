@@ -16,6 +16,7 @@ cfg.aggr = ""
 
 cfg.ps = [1, 19349663, 83492791]
 
+cfg.ratio = 0.5
 cfg.fast_eval = False
 cfg.eval_ratio = -1.0
 cfg.multi_stream = False

@@ -347,7 +347,7 @@ class Dataset(data.Dataset):
             semantic_masks[k] = smask
         img_oldold = img.copy()
         if cfg.mask_bkgd:
-            img[msk == 0] = 0
+            img[msk == 0] = 1 if cfg.white_bkgd  else 0
         K[:2] = K[:2] * ratio
 
         if self.human in ['CoreView_313', 'CoreView_315']:

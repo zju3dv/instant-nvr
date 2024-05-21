@@ -69,7 +69,7 @@ class Renderer:
         raw = ret['raw'].reshape(n_batch, n_pixel, n_sample, 4)
         rgb = raw[..., :3]
         occ = raw[..., 3]
-        weights, rgb_map, acc_map = volume_rendering(rgb, occ, cfg.random_bg)
+        weights, rgb_map, acc_map = volume_rendering(rgb, occ, bg_brightness = cfg.white_bkgd, use_random_bg = cfg.random_bg)
         weights = weights.view(-1, *weights.shape[2:])
         rgb_map = rgb_map.view(-1, *rgb_map.shape[2:])
         acc_map = acc_map.view(-1, *acc_map.shape[2:])

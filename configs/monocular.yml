@@ -1,0 +1,19 @@
+task: "monocular"
+exp_name: "dance"
+gpus: [1]
+
+default_cfg_path: "configs/default.yml"
+models_path: 'data/models'
+smpl_path: 'data/smpl-meta'
+data_root: 'data/dance'
+
+tmp_path: '/mnt/data/'
+
+begin_ith_frame: 0
+num_train_frame: 100
+frame_interval: 3
+
+
+# 3rdparty
+easymocap_path: '~/opt/EasyMocap'
+schp_path: '~/opt/EasyMocap/3rdparty/Self-Correction-Human-Parsing'
