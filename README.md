@@ -69,7 +69,7 @@ python run.py --type evaluate --cfg_file configs/inb/inb_${name}.yaml exp_name i
 
 This repository currently serves as the release of the technical paper's implementation and will undergo future updates (planned below) to enhance user-friendliness. We warmly welcome and appreciate any contributions.
 
-- [ ] Instruction on running on custom datasets
+- [x] Instruction on running on custom datasets (Kudos to [@tian42chen](https://github.com/tian42chen)!!)
 - [ ] Add support for further acceleration using CUDA
 - [ ] Add a Google Colab notebook demo
 
