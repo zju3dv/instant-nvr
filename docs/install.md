@@ -51,3 +51,6 @@ cd $ROOT/data
 ln -s /path/to/monocap monocap
 ```
 
+#### Custom Dataset
+
+We have recently uploaded our instruction for processing custom dataset [here](https://github.com/zju3dv/instant-nvr/blob/master/docs/preprocess.md). It is still in an early stage, and have not been fully tested yet. We need your feedback! Please try it and let us know if you have any questions.
